@@ -1,10 +1,9 @@
-%-------------------------
 % Resume in Latex
 % Author : Aras Gungore
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -24,7 +23,7 @@
 
 %---------- FONT OPTIONS ----------
 % sans-serif
-%\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
  \usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
@@ -39,12 +38,13 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{3.60004pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.7in}
-\addtolength{\evensidemargin}{-0.7in}
-\addtolength{\textwidth}{1.4in}
-\addtolength{\topmargin}{-0.7in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -92,7 +92,8 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      {\small#3} & {\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -131,9 +132,9 @@
 %---------- HEADING ----------
 
 \begin{center}
-    \textbf{\Huge \scshape Noah Goldschmied} \\ \vspace{3pt}
+    \textbf{\Huge \scshape Noah Goldschmied} \\ \vspace{1pt}
     \small
-    \faMobile \hspace{.5pt} \href{tel:6478018445}{(647) 801-8445}
+    \faPhone \hspace{.5pt} \href{tel:+16478018445}{(647) 801-8445}
     $|$
     \faEnvelope \hspace{.5pt} \href{mailto:noahgoldschmied@gmail.com}{noahgoldschmied@gmail.com}
     $|$
@@ -143,7 +144,7 @@
     $|$
     \faGlobe \hspace{.5pt} \href{https://noahgoldschmied.com}{Portfolio}
     $|$
-    \faMapMarker \hspace{.5pt} Toronto, ON, CA
+    \faMapMarker \hspace{.5pt} {Toronto, Canada}
 \end{center}
 
 
@@ -153,9 +154,11 @@
 \section{Education}
   \vspace{3pt}
   \resumeSubHeadingListStart
+    
     \resumeEducationHeading
-      {McMaster University}{Hamilton, Ontario, Canada}
-      {\href{https://www.eng.mcmaster.ca/cas/degree-options/software-engineering-and-management/}{B.Eng.Mgt in Software Engineering and Management}}{Sep. 2021 -- Apr. 2027 (Expected)}
+      {McMaster University}{Hamilton, Canada}
+      {\href{https://www.eng.mcmaster.ca/cas/degree-options/software-engineering-and-management/}{B.Eng.Mgt in Software Engineering and Management}}{Sep. 2021 \textbf{--} Apr. 2027 (expected)}
+      {Dean's Honour List for Academic Excellence all 4 years}{5 year degree \& 16 months co-op}
   \resumeSubHeadingListEnd
 
 %----------- SKILLS -----------
@@ -165,11 +168,11 @@
   \resumeSubHeadingListStart
     \small{\item{
         
-        \textbf{Languages:}{ C/C++, C\#, Java, Python, Go, JavaScript, TypeScript, SQL, Swift, Scala, MATLAB, R} \\ \vspace{3pt}
-        
-        \textbf{Technologies:}{ Qt, Flask, Django, Node.js, React.js, MySQL, MongoDB, Git, SVN, Docker, AWS, Kubernetes, GCP, Kafka, RabbitMQ, OpenCV, PyTorch, TensorFlow} \\ \vspace{3pt}
-        
-        \textbf{Methodologies:}{ Agile, Scrum, OOP, Functional Programming, DevOps, CI/CD, TDD} \\ \vspace{3pt}
+        \textbf{Languages:}{ Java, Python, SQL, TypeScript, CSS, HTML, Matlab, C, Go} \\ \vspace{3pt}
+
+        \textbf{Technologies:}{ SpringBoot, PostgreSQL, React, Docker, Google Dialogflow, Kubernetes, TensorFlow, Keras } \\ \vspace{3pt}
+
+        \textbf{Tools:}{ Git, Jira, GitHub Actions, Figma, VS Code, JetBrains IDEs, MS Office Suite} \\ \vspace{3pt}
         
     }}
   \resumeSubHeadingListEnd
@@ -183,94 +186,43 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Avikon}{Istanbul, Turkey}
-      {Software Engineer}{Dec 2023 \textbf{--} Present, Full-time}
+      {Royal Bank of Canada}{Toronto, Canada}
+      {Software Engineer Intern - End User Services}{Sep. 2025 \textbf{--} Present, Internship}
         \resumeItemListStart
-            \resumeItem{Designed a Qt-based chat application utilizing TCP for real-time communication within a client-server architecture, demonstrating expertise in socket programming, data serialization, and message routing.}
-            \resumeItem{Crafted message types in IDL and designed a data-centric publish-subscribe architecture based on a flyweight design pattern to implement OpenDDS for a radar system's command and control interface. Utilized QoS policies to facilitate the transmission of both volatile and persistent data across different topics.}
-            \resumeItem{Implemented a fully asynchronous AMQP-based C++ client with a layered architecture for RabbitMQ message broker to ensure seamless message handling among multiple topics.}
-            \resumeItem{Developed a cross-platform asynchronous program to refine UAV detection for a GIS application. Benchmarked point-in-polygon algorithms with a GeoJSON polygon database concurrently fetched from MongoDB.}
+            \resumeItem{Building and maintaining features on Tia, RBC's internal tech support bot, using \textbf{TypeScript} and \textbf{React}}
+            \resumeItem{Utilizing \textbf{Google Dialogflow} to enhance Tia's natural language understanding capabilities, improving user interaction and satisfaction.}
         \resumeItemListEnd
 
     \resumeSubheading
-      {SemperTech}{Istanbul, Turkey}
-      {Software Engineer}{Sep 2023 \textbf{--} Nov 2023, Full-time}
+      {Royal Bank of Canada}{Toronto, Canada}
+      {\href{https://jobs.rbc.com/ca/en/amplify}{Developer, RBC Amplify Program}}{May 2025 \textbf{--} Aug 2025, Internship}
         \resumeItemListStart
-            \resumeItem{Worked on the “Arçelik Digital Home Energy” project in a collaborative effort with DAI-Labor at the Technical University of Berlin under the supervision of \href{https://www.linkedin.com/in/prof-dr-dr-h-c-sahin-albayrak-65452a1/}{\color{blue}Prof. Dr. Şahin Albayrak}.}
-            \resumeItem{Simulated discovery, pairing, and data exchange processes using the EEBUS protocol suite with C\# and Go. Migrated the framework from Go to C++ in order to ensure future adaptability for smart home IoT devices.}
-            \resumeItem{Implemented the TLS protocol for secure data exchange using the X.509 standard and integrated multicast DNS for seamless communication to complement the development of SHIP and SPINE protocols.}
+            \resumeItem{Created a \textbf{patent pending wire payment routing engine} for international payments, as part of RBC Amplify - an innovation program for students to build products that disrupt the company and beyond}
+            \resumeItem{\textbf{Architeched, designed \& developed} the application using a \textbf{Java \& Spring Boot} backend with \textbf{PostgreSQL} databases, which integrated external and internal documents to intelligently select routes}
+            \resumeItem{Presented product to C-suite executives (CTO, CFO) and hundreds of attendees, won \textbf{Technical Distinction;} a \textbf{\$20,000} prize rewarded to one team for technical excellence and engineering craftsmanship}
         \resumeItemListEnd
 
-    % \resumeSubheading
-      % {Scale AI}{San Francisco, California, United States (Remote)}
-      % {Prompt Engineer}{Mar 2023 \textbf{--} Sep 2023, Freelance}
-        % \resumeItemListStart
-            % \resumeItem{Crafted elaborate Turkish prompts for various generative AI tasks. Tailored prompts using well-defined formats such as natural language questions and structured inputs based on the task's domain to fine-tune the LLM, improving the chatbot's responses and enhancing overall performance.}
-            % \resumeItem{Provided user feedback by reviewing and scoring the chatbot's responses to ensure they align with intended chatbot behaviors and the chatbot produces accurate and contextually appropriate responses to given prompts.}
-            % \resumeItem{Engaged in collaborative meetings with cross-functional teams and project coordinators, actively seeking guidance, addressing queries, and collectively brainstorming strategies to generate higher-quality prompts.}
-        % \resumeItemListEnd
 
     \resumeSubheading
-      {Max Planck Institute for Intelligent Systems}{Stuttgart, Baden\textbf{-}Württemberg, Germany}
-      {Undergraduate Researcher}{Jun 2022 \textbf{--} Aug 2022, Internship}
+      {Jacor Marketing}{Vaughan, Canada}
+      {Warehouse Clerk - Order Fulfillment \& Inventory Manager}{Apr 2024. \textbf{--} Jun. 2024, Contract Full-time}
         \resumeItemListStart
-            \resumeItem{Engaged in collaborative research within the Robotics, Collectives and Learning subgroup at the Physical Intelligence Department with Ph.D. students \href{https://www.linkedin.com/in/sinan-ozgun-demir-981311129/}{\color{blue}Sinan Özgün Demir} and \href{https://www.linkedin.com/in/alpkaracakol/}{\color{blue}Alp Can Karacakol} on a project about 3D printing and heat-assisted magnetic programming of soft machines under the supervision of \href{https://www.linkedin.com/in/metin-sitti-0a8a712/}{\color{blue}Prof. Dr. Metin Sitti}.}
-            \resumeItem{Optimized a C++ ROS package for real-time conversion of 3D motion controller events to ROS messages, achieving high-frequency and buffer-free synchronization.}
-            \resumeItem{Developed an Arduino Mega driver to activate a laser and pressure regulator, for monitoring coil temperatures and PID tuning to control the coil currents. Established a robust ROS-Arduino communication network by integrating ROSSerial and handshaking to simulate a 3D printing and magnetic programming process with Python.}
-            % \resumeItem{Designed the project's system and software architecture, flowchart, and state machine diagram. Expanded G-code capabilities by incorporating spherical coordinates to specify the direction of magnetization for shape morphing.}
+            \resumeItem{Managed inventory and fulfilled orders for graduation products, insuring accurate order packing and timely delivery to over 100 schools across Canada}
         \resumeItemListEnd
-    
-    % \resumeSubheading
-      % {Nanonetworking Research Group, Boğaziçi University}{Istanbul, Turkey}
-      % {Undergraduate Researcher}{Oct 2021 \textbf{--} Jun 2022, Part-time}
-        % \resumeItemListStart
-            % \resumeItem{Worked on the “Design and Implementation of Molecular Communication Systems Using Index Modulation” project under the supervision of \href{https://www.linkedin.com/in/alipusane/}{\color{blue}Prof. Dr. Ali Emre Pusane}.}
-            % \resumeItem{Simulated the Brownian motion of molecules in a SISO MCvD system and predicted simulation parameters such as receiver radius, diffusion coefficient, and transmitter-receiver distance using CNNs with Keras and TensorFlow.}
-            % \resumeItem{Plotted the arrival of molecules per symbol duration in a SISO MCvD system using Binomial, Poisson, and Gaussian model approximations with MATLAB.}
-            % \resumeItem{Ran Monte Carlo simulations of the Gaussian model to encode and decode randomized binary sequences in a SISO MCvD system using BCSK modulation technique and calculated the bit error rate on Z-channel.}
-        % \resumeItemListEnd
+
+    \resumeSubheading
+      {HeyBrain AI}{Remote}
+      {Software Developer Intern - User Interaction}{Apr 2023. \textbf{--} Jun. 2023, Contract Full-time}
+        \resumeItemListStart
+            \resumeItem{Developed a Telegram bot using \textbf{Python} that interfaces with HeyBrain's AI models, allowing users to interact with the AI through a familiar platform}
+        \resumeItemListEnd
 
     % \vspace{20pt}
     \resumeSubheading
-      {SESTEK Speech Enabled Software Technologies}{Istanbul, Turkey}
-      {AI Research and Development Intern}{Jan 2022 \textbf{--} Feb 2022, Internship}
-        \resumeItemListStart
-            % \resumeItem{Executed diverse NLP tasks, including NER, POS tagging, sentiment analysis, text classification, and extractive and generative QA using transformers and Hugging Face libraries. Conducted a thorough literature review on information retrieval and reading comprehension to stay updated on SOTA ML models.}
-            \resumeItem{Developed a generative QA system with dense passage retrieval (DPR) and retrieval-augmented generation (RAG) techniques using the Haystack framework and PyTorch.}
-            \resumeItem{Worked on a Turkish open-domain QA system made by fine-tuning BERTurk and XLM-Roberta models. Tabularized exact match and F1 scores derived from DeepMind's XQuAD and various Turkish data sets.}
-        \resumeItemListEnd
-
-    % \resumeSubheading
-      % {Meteksan Defense Industry Inc.}{Ankara, Turkey}
-      % {Analog Design Engineering Intern}{Jul 2021 \textbf{--} Aug 2021, Internship}
-        % \resumeItemListStart
-            % \resumeItem{Designed and simulated numerous analog circuits such as voltage-mode controlled buck converter, phase-shifted full-bridge isolated DC-DC converter, and EMI filters with LTspice. Integrated these circuits and implemented a 320 W power distribution unit to be used in a radar system's power circuit board.}
-            % \resumeItem{Researched real-world compatible electronic components to be used in such circuits including GaNFETs, high-side gate drivers, and Schottky diodes.}
-            % \resumeItem{Assembled PCBs of both common and differential mode filters and used VNA Bode 100 to measure the cut-off frequencies.}
-        % \resumeItemListEnd
+      {Camp Biluim}{Mont Tremblant, Canada}
+      {Camp Counselor - Head of Sports}{Summers 2022 \textbf{--} 2024, Seasonal}
+        
     
-  \resumeSubHeadingListEnd
-
-
-
-%----------- AWARDS & ACHIEVEMENTS -----------
-
-\section{Awards \& Achievements}
-  \vspace{2pt}
-  \resumeSubHeadingListStart
-    \small{\item{
-        \textbf{High Honors Degree:}{ Awarded to Bachelor alumni who have graduated with a GPA greater than or equal to 3.50 by Boğaziçi University. (Jul 2023)} \\ \vspace{3pt}
-
-        \textbf{TÜBİTAK 2247-C Intern Researcher Scholarship:}{ Awarded to students who take part in research projects carried out by the Scientific and Technological Research Council of Turkey (TÜBİTAK). (Dec 2021 \textbf{--} Jun 2022)} \\ \vspace{3pt}
-    
-        % \textbf{National University Admission Exam (YKS):}{ Ranked $75^{th}$ in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500. (Jul 2018)} \\ \vspace{3pt}
-        
-        \textbf{KYK Outstanding Success Scholarship:}{ Awarded to students who have been ranked in the top 100 on National University Admission Exam by Higher Education Credit and Hostels Institution (KYK). (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
-        
-        % \textbf{Boğaziçi University Success Scholarship:}{ Awarded to students who have been ranked in the top 100 on National University Admission Exam by Boğaziçi University. (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
-        
-        \textbf{Kocaeli Science High School Valedictorian Award:}{ Graduated as the highest ranked student. (Jun 2018)}
-    }}
   \resumeSubHeadingListEnd
 
 
@@ -282,24 +234,45 @@
     \resumeSubHeadingListStart
       
       \resumeProjectHeading
-        {\textbf{Filters and Fractals} $|$ \emph{\href{https://github.com/arasgungore/filters-and-fractals}{\color{blue}GitHub}}}{}
+        {\textbf{Personal Portfolio} $|$ \emph{\href{https://noahgoldschmied.com}{\color{blue}Link}}}{}
           \resumeItemListStart
-            \resumeItem{A C project which implements a variety of image processing operations that manipulate the size, filter, brightness, contrast, saturation, and other properties of PPM images from scratch and recursive fractal generation functions to model popular fractals including Mandelbrot set, Julia set, Koch curve, Barnsley fern, and Sierpinski triangle.}
+            \resumeItem{Built my portfolio website with \textbf{TypeScript \& React}, deployed with GitHub Actions and GitHub Pages. Designed the UI based on simplicity and ease of navigation, while also bringing my personality forward.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Name That Sport} $|$ \emph{\href{https://namethatsport.streamlit.app/}{\color{blue}Link}}}{}
+          \resumeItemListStart
+            \resumeItem{A \textbf{Python} project in which users can provide an image of a sport and the model predicts the sport using a pre-trained CNN. The model was built using \textbf{TensorFlow} \& \textbf{Keras} and achieved an accuracy of 83\% on a custom set of 1000 images across 100 sports.}
           \resumeItemListEnd
       
       \resumeProjectHeading
-        {\textbf{Chess Bot} $|$ \emph{\href{https://github.com/arasgungore/chess-bot}{\color{blue}GitHub}}}{}
+        {\textbf{Software Experiments and Lab Studies}}{}
           \resumeItemListStart
-            \resumeItem{A C++ project in which you can play chess against an AI with a specified decision tree depth that uses alpha-beta pruning algorithm to predict the optimal move. Aside from basic moves, this mini chess engine also implements chess rules such as castling, en passant, fifty-move rule, threefold repetition, and pawn promotion.}
+            \resumeItem{A lab based class where I conducted experiments and learned about the fundamental algorithms in computer science.}
           \resumeItemListEnd
-      
+
       \resumeProjectHeading
-        {\textbf{DS\&A Projects} $|$ \emph{\href{https://github.com/arasgungore/CMPE250-projects}{\color{blue}GitHub}}}{}
+        {\textbf{Terrain Generation Simulator}}{}
           \resumeItemListStart
-            \resumeItem{Five Java projects that apply DS\&A concepts such as discrete-event simulation using priority queues, Dijkstra's shortest path algorithm, Prim's algorithm to find the minimum spanning tree, Dinic's algorithm for maximum flow problems, and weighted job scheduling with dynamic programming to real-world problems.}
+            \resumeItem{A \textbf{Java} project that allows users to control terrain type, temperature, biome, and features via input or seed. The terrain is generated using a custom polygon ADT and random noise.}
           \resumeItemListEnd
       
     \resumeSubHeadingListEnd
+
+%----------- AWARDS & ACHIEVEMENTS -----------
+
+\section{Awards \& Achievements}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Technical Distinction {--} RBC Amplify:}{ Received recognition and the top engineering prize of \textbf{\$20,000} for \textbf{engineering quality and craftsmanship} throughout internship. (Summer 2025)} \\ \vspace{3pt}
+
+        \textbf{Provisional Patent:}{ Filed a provisional patent for a novel wire payment routing engine that optimizes cross-border transactions. (Summer 2025)} \\ \vspace{3pt}
+        \textbf{McMaster University Dean's Honour List:}{ Awarded for achieving a yearly GPA above a 10.0 (2021-2025)} \\ \vspace{3pt}
+        
+        \textbf{JCC Volunteer of the Year:}{ Awarded for my work in the inclusion program as a coach (Jun 2021)}
+    }}
+  \resumeSubHeadingListEnd
 
 
 
@@ -361,5 +334,4 @@
 
 
 %-------------------------------------------
-\end{itemize}
 \end{document}
