@@ -1,0 +1,4 @@
+# Ignore all main.* files except main.pdf and main.tex
+main.*
+!main.pdf
+!main.tex
