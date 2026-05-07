@@ -168,11 +168,11 @@
   \resumeSubHeadingListStart
     \small{\item{
         
-        \textbf{Languages:}{ Java/Kotlin, TypeScript, Python, SQL, CSS, HTML, Matlab, C, Go} \\ \vspace{3pt}
+        \textbf{Languages:}{ Java, Kotlin, SQL, TypeScript, Python, CSS, HTML} \\ \vspace{3pt}
 
-        \textbf{Technologies:}{ SpringBoot, PostgreSQL, React, Docker, Google Dialogflow, DigitalOcean, Twilio, Kubernetes, TensorFlow, Keras } \\ \vspace{3pt}
+        \textbf{Technologies:}{ SpringBoot, GraphQL, PostgreSQL, Temporal, React, Docker, Datadog, Terraform, Braze, Taxi, Google Dialogflow, DigitalOcean, Twilio } \\ \vspace{3pt}
 
-        \textbf{Tools:}{ Git, GitHub Actions, Jira, Postman, Bruno, Figma, VS Code, Streamlit, JetBrains IDEs, MS Office Suite}
+        \textbf{Tools:}{ Git, Claude Code, GitHub Actions, Jira, Postman, Bruno, Figma, VS Code, JetBrains IDEs, MS Office Suite}
         
     }}
   \resumeSubHeadingListEnd
@@ -189,9 +189,11 @@
       {Wealthsimple}{Jan. 2026 \textbf{--} Present}
       {Software Engineering Intern}{}
       \resumeItemListStart
-            \resumeItem{Built and implemented \textbf{options trading infrastructure} for internal trading operations using \textbf{Kotlin} and \textbf{Spring Boot}, enabling Wealthsimple traders to optimize execution and hedging strategies for client orders}
-            \resumeItem{Enhanced platform security by building \textbf{fraud prevention systems} that block impersonation on precious metals orders, protecting high-value transactions through custom authorization instrumentation and GraphQL mutation guards}
-            \resumeItem{Improved operational observability by designing and implementing \textbf{production metrics} tracking quote-to-fill price differences and post-expiry order placements, enabling the team to monitor execution quality and identify pricing anomalies}
+            \resumeItem{Drove the full-stack rebuild of the internal \textbf{Orders page} used daily by Wealthsimple customer support agents and operations to monitor \textbf{30,000 orders/day}, designing a new \textbf{GraphQL} endpoint in \textbf{Kotlin} and \textbf{Spring Boot} and redesigning the \textbf{TypeScript/React} frontend with unified multi-asset support across equities, options, crypto, DRIP, and managed accounts, then deprecating the legacy page}
+            \resumeItem{Designing and rolling out a \textbf{database archiving} solution by splitting the order entity and introducing archived tables for historical orders, preserving long-term order history while keeping primary tables fast for high-volume reads}
+            \resumeItem{Shipped customer-facing email notifications for \textbf{Norbert's Gambit} transactions reaching \textbf{3,000+ clients weekly}, and authored a \textbf{Claude Code skill} that guides developers end-to-end through adding new notification flows across a 4-system pipeline (\textbf{Kotlin}, Ruby, Taxi, Braze), preventing silent failures from cross-repo configuration mismatches}
+            \resumeItem{Engineered \textbf{dynamic order release throttling} in \textbf{Kotlin} and \textbf{Spring Boot} that ensures \textbf{85,000+ pre-market orders} fully release by the 8:15 pre-market open, scaling submission rate to queue depth across a 15-minute release window with a configurable kill switch as a safeguard}
+            \resumeItem{Migrated \textbf{20+ production order monitors} from a legacy \textbf{Guice} framework to \textbf{Spring Boot} via a disciplined 3-PR rollout pattern (add Spring Boot metrics, update \textbf{Datadog} dashboards and \textbf{Terraform} alerts, retire Guice code), preserving alerting continuity across critical paths including pending submission, extended/overnight orders, fractional orders, and options}
         \resumeItemListEnd
 
     \resumeSubheading
@@ -207,8 +209,8 @@
       {Royal Bank of Canada}{May 2025 \textbf{--} Aug. 2025}
       {Developer, RBC Amplify Program}{}
         \resumeItemListStart
-            \resumeItem{Developed a \textbf{patent pending wire payment routing engine} for wire payments that intelligently selects routes by integrating external and internal documents, as part of RBC Amplify - an innovation program for students to build products that disrupt the company and beyond}
-            \resumeItem{\textbf{Architected, designed, and developed} the application using a \textbf{Java and Spring Boot} backend with \textbf{PostgreSQL} databases}
+            \resumeItem{Developed a \textbf{patent-pending wire payment routing engine} that intelligently selects routes by integrating the \textbf{SWIFT} reference table with internal routing rules}
+            \resumeItem{\textbf{Architected} the application using a \textbf{Java} and \textbf{Spring Boot} backend with \textbf{PostgreSQL} databases}
             \resumeItem{Won \textbf{Technical Distinction}, a \textbf{\$20,000} prize for technical excellence and engineering craftsmanship, after presenting the product to C-suite executives (CTO, CFO) and hundreds of attendees}
         \resumeItemListEnd
 
@@ -220,12 +222,12 @@
     %        \resumeItem{Managed inventory and fulfilled orders for graduation products, ensuring accurate order packing and timely delivery to over 100 schools across Canada}
     %    \resumeItemListEnd
 
-     \resumeSubheading
-       {HeyBrain AI}{Apr. 2023 \textbf{--} Jun. 2023}
-       {Software Developer Intern}{}
-         \resumeItemListStart
-             \resumeItem{Developed a Telegram bot using \textbf{Python} that interfaces with HeyBrain's AI models, allowing users to interact with the AI through a chatbot platform}
-         \resumeItemListEnd    
+%      \resumeSubheading
+%        {HeyBrain AI}{Apr. 2023 \textbf{--} Jun. 2023}
+%        {Software Developer Intern}{}
+%          \resumeItemListStart
+%              \resumeItem{Developed a Telegram bot using \textbf{Python} that interfaces with HeyBrain's AI models, allowing users to interact with the AI through a chatbot platform}
+%          \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -237,9 +239,9 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-      {\textbf{Whatsapp Fantasy Manager} $|$ \emph{\href{https://github.com/noahgoldschmied/WhatsappFantasyManager}{\color{blue}Repo}}}{}
+      {\textbf{WhatsApp Fantasy Manager} $|$ \emph{\href{https://github.com/noahgoldschmied/WhatsappFantasyManager}{\color{blue}Repo}}}{}
         \resumeItemListStart
-          \resumeItem{A \textbf{TypeScript} project that allows users to chat with and manage their fantasy sports teams on Whatsapp. Deployed on \textbf{DigitalOcean}, connected to whatsapp via the \textbf{Twilio} sandbox.}
+          \resumeItem{A \textbf{TypeScript} project that allows users to chat with and manage their fantasy sports teams on WhatsApp. Deployed on \textbf{DigitalOcean}, connected to WhatsApp via the \textbf{Twilio} sandbox.}
         \resumeItemListEnd
       
       \resumeProjectHeading
