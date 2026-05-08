@@ -25,12 +25,12 @@
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
- \usepackage[sfdefault]{noto-sans}
+% \usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
-% \usepackage{charter}
+ \usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -187,13 +187,13 @@
 
     \resumeSubheading
       {Wealthsimple}{Jan. 2026 \textbf{--} Present}
-      {Software Engineering Intern}{}
+      {Intern, Software Development}{}
       \resumeItemListStart
-            \resumeItem{Drove the full-stack rebuild of the internal \textbf{Orders page} used daily by Wealthsimple customer support agents and operations to monitor \textbf{30,000 orders/day}, designing a new \textbf{GraphQL} endpoint in \textbf{Kotlin} and \textbf{Spring Boot} and redesigning the \textbf{TypeScript/React} frontend with unified multi-asset support across equities, options, crypto, DRIP, and managed accounts, then deprecating the legacy page}
+            \resumeItem{Drove the full-stack rebuild of the internal \textbf{Orders page} used daily by Wealthsimple customer support agents and operations to monitor \textbf{30,000 orders/day}, designing a new \textbf{GraphQL} endpoint in \textbf{Kotlin} and \textbf{Spring Boot} and redesigning the \textbf{TypeScript/React} frontend}
             \resumeItem{Designing and rolling out a \textbf{database archiving} solution by splitting the order entity and introducing archived tables for historical orders, preserving long-term order history while keeping primary tables fast for high-volume reads}
-            \resumeItem{Shipped customer-facing email notifications for \textbf{Norbert's Gambit} transactions reaching \textbf{3,000+ clients weekly}, and authored a \textbf{Claude Code skill} that guides developers end-to-end through adding new notification flows across a 4-system pipeline (\textbf{Kotlin}, Ruby, Taxi, Braze), preventing silent failures from cross-repo configuration mismatches}
-            \resumeItem{Engineered \textbf{dynamic order release throttling} in \textbf{Kotlin} and \textbf{Spring Boot} that ensures \textbf{85,000+ pre-market orders} fully release by the 8:15 pre-market open, scaling submission rate to queue depth across a 15-minute release window with a configurable kill switch as a safeguard}
-            \resumeItem{Migrated \textbf{20+ production order monitors} from a legacy \textbf{Guice} framework to \textbf{Spring Boot} via a disciplined 3-PR rollout pattern (add Spring Boot metrics, update \textbf{Datadog} dashboards and \textbf{Terraform} alerts, retire Guice code), preserving alerting continuity across critical paths including pending submission, extended/overnight orders, fractional orders, and options}
+            \resumeItem{Shipped customer-facing email notifications for \textbf{Norbert's Gambit} transactions reaching \textbf{3,000+ clients weekly}, and authored a \textbf{Claude Code skill} that guides developers end-to-end through adding new notification flows across a 4-system pipeline}
+            \resumeItem{Engineered \textbf{dynamic order release throttling} in \textbf{Kotlin} and \textbf{Spring Boot} that ensures \textbf{85,000+ pre-market orders} fully release by market open, scaling submission rate to queue depth across a 15-minute release window}
+            \resumeItem{Migrated \textbf{20+ production order monitors} from a legacy \textbf{Guice} framework to \textbf{Spring Boot}, preserving alerting continuity across critical paths including pending submission, extended/overnight orders, fractional orders, and options}
         \resumeItemListEnd
 
     \resumeSubheading
@@ -222,12 +222,12 @@
     %        \resumeItem{Managed inventory and fulfilled orders for graduation products, ensuring accurate order packing and timely delivery to over 100 schools across Canada}
     %    \resumeItemListEnd
 
-%      \resumeSubheading
-%        {HeyBrain AI}{Apr. 2023 \textbf{--} Jun. 2023}
-%        {Software Developer Intern}{}
-%          \resumeItemListStart
-%              \resumeItem{Developed a Telegram bot using \textbf{Python} that interfaces with HeyBrain's AI models, allowing users to interact with the AI through a chatbot platform}
-%          \resumeItemListEnd
+     \resumeSubheading
+       {HeyBrain AI}{Apr. 2023 \textbf{--} Jun. 2023}
+       {Software Developer Intern}{}
+         \resumeItemListStart
+             \resumeItem{Developed a Telegram bot using \textbf{Python} that interfaces with HeyBrain's AI models, allowing users to interact with the AI through a chatbot platform}
+         \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
