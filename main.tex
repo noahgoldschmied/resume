@@ -26,11 +26,17 @@
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+ \usepackage[default]{sourcesanspro}
+% \usepackage[default]{opensans}
+% \usepackage[default]{lato}
+% \usepackage[default]{montserrat}
+% \usepackage[default]{raleway}
+% \usepackage[sfdefault]{inter}
+% \usepackage[T1]{fontenc}\usepackage{helvet}\renewcommand{\familydefault}{\sfdefault}
 
 % serif
 % \usepackage{CormorantGaramond}
- \usepackage{charter}
+% \usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -55,8 +61,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -66,7 +72,7 @@
 
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{0pt}}
   }
 }
 
@@ -121,7 +127,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,7 +160,7 @@
 \section{Education}
   \vspace{1pt}
   \resumeSubHeadingListStart
-    
+
     \resumeEducationHeading
       {McMaster University}{Hamilton, Ontario, Canada}
       {\href{https://www.eng.mcmaster.ca/cas/degree-options/software-engineering-and-management/}{B.Eng.Mgt in Software Engineering and Management}}{Sep. 2021 \textbf{--} Apr. 2027 (expected)}
@@ -167,13 +173,13 @@
   \vspace{0pt}
   \resumeSubHeadingListStart
     \small{\item{
-        
+
         \textbf{Languages:}{ Kotlin, TypeScript, Java, Python, SQL, HTML, CSS} \\ \vspace{3pt}
 
         \textbf{Technologies:}{ Spring Boot, GraphQL, JPA/Hibernate, PostgreSQL, Liquibase, Temporal, React, Docker, Datadog, Terraform, Braze, Google Dialogflow, DigitalOcean, Twilio} \\ \vspace{3pt}
 
         \textbf{Tools:}{ Git, Claude Code, GitHub Actions, Jira, Postman, Bruno, Figma, VS Code, JetBrains IDEs}
-        
+
     }}
   \resumeSubHeadingListEnd
 
@@ -186,21 +192,21 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Wealthsimple}{Jan. 2026 \textbf{--} Present}
-      {Intern, Software Development}{}
+      {Wealthsimple}{}
+      {Intern, Software Development}{Jan. 2026 \textbf{--} Present}
       \resumeItemListStart
-            \resumeItem{Led the full-stack rebuild of the internal Orders page monitoring \textbf{30,000+ orders/day} for CX and ops, shipping a new GraphQL endpoint in Kotlin/Spring Boot, a redesigned TypeScript/React frontend, and detail views for crypto, options, DRIP, and managed accounts}
             \resumeItem{Designed and shipped an \textbf{order archiving} system moving closed orders into a dedicated 11-table archive schema with tenancy-aware reads, drained by a Temporal workflow with a matching reverse-archive path for safe recovery}
-            \resumeItem{Shipped \textbf{Norbert's Gambit} emails reaching 3,000+ clients weekly, refactored the shared notification code (models, utils, SQS publisher) into a common library used across order services, and authored a Claude Code skill that walks developers through adding new notification flows}
+            \resumeItem{Led the full-stack rebuild of the internal Orders page monitoring \textbf{30,000+ orders/day} for CX and ops, shipping a new GraphQL endpoint in Kotlin/Spring Boot, a redesigned TypeScript/React frontend, and detail views for crypto, options, DRIP, and managed accounts}
+            %\resumeItem{Shipped \textbf{Norbert's Gambit} emails reaching 3,000+ clients weekly, refactored the shared notification code (models, utils, SQS publisher) into a common library used across order services, and authored a Claude Code skill that walks developers through adding new notification flows}
             \resumeItem{Owned end-to-end migration of \textbf{40+ production order monitors} off a legacy Guice framework onto Spring Boot across 15+ batches, spanning equity, options, fractional, and cross-market flow monitors, preserving alerting continuity throughout}
             \resumeItem{Contributed backend, notifications, and trade confirmation support for Wealthsimple's \textbf{IPO access} launch, including API-layer duplicate-order rejection to prevent over-allocation and IPO-specific wording for order-cancelled and order-rejected notifications}
-            \resumeItem{Delivered self-serve \textbf{trade confirmation PDF access} for Wealthsimple's customer support agents, coordinating role provisioning, backend authorization, and frontend gating across five services to eliminate engineering escalations for client PDF requests}
+            %\resumeItem{Delivered self-serve \textbf{trade confirmation PDF access} for Wealthsimple's customer support agents, coordinating role provisioning, backend authorization, and frontend gating across five services to eliminate engineering escalations for client PDF requests}
             \resumeItem{Added to the secondary on-call rotation for order execution, resolving all incoming client-escalation tickets with same-day turnarounds on cases including double-charged trades, TFSA execution issues, and USD/CAD conversion mismatches}
         \resumeItemListEnd
 
     \resumeSubheading
-      {Royal Bank of Canada}{Sep. 2025 \textbf{--} Dec. 2025}
-      {Software Engineering Intern}{}
+      {Royal Bank of Canada}{}
+      {Software Engineering Intern}{Sep. 2025 \textbf{--} Dec. 2025}
         \resumeItemListStart
             \resumeItem{Shipped TypeScript/React features on Tia, RBC's internal tech support bot serving \textbf{85,000+ employees}}
             \resumeItem{Built an automated ticket escalation flow that cut ServiceNow team manual work by \textbf{30\%} and improved critical-issue response times}
@@ -208,8 +214,8 @@
         \resumeItemListEnd
 
     \resumeSubheading
-      {Royal Bank of Canada}{May 2025 \textbf{--} Aug. 2025}
-      {Developer, RBC Amplify Program}{}
+      {Royal Bank of Canada}{}
+      {Developer, RBC Amplify Program}{May 2025 \textbf{--} Aug. 2025}
         \resumeItemListStart
             \resumeItem{Built a \textbf{patent-pending wire payment routing engine} on a Java/Spring Boot backend with PostgreSQL, integrating the SWIFT reference table with internal routing rules}
             \resumeItem{Designed the routing rules as a configurable system so non-technical teams could update logic as business requirements evolved, without engineering involvement}
