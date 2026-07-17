@@ -168,11 +168,11 @@
   \resumeSubHeadingListStart
     \small{\item{
         
-        \textbf{Languages:}{ Java, Kotlin, SQL, TypeScript, Python, CSS, HTML} \\ \vspace{3pt}
+        \textbf{Languages:}{ Kotlin, TypeScript, Java, Python, SQL, HTML, CSS} \\ \vspace{3pt}
 
-        \textbf{Technologies:}{ SpringBoot, GraphQL, PostgreSQL, Temporal, React, Docker, Datadog, Terraform, Braze, Taxi, Google Dialogflow, DigitalOcean, Twilio } \\ \vspace{3pt}
+        \textbf{Technologies:}{ Spring Boot, GraphQL, JPA/Hibernate, PostgreSQL, Liquibase, Temporal, React, Docker, Datadog, Terraform, Braze, Google Dialogflow, DigitalOcean, Twilio} \\ \vspace{3pt}
 
-        \textbf{Tools:}{ Git, Claude Code, GitHub Actions, Jira, Postman, Bruno, Figma, VS Code, JetBrains IDEs, MS Office Suite}
+        \textbf{Tools:}{ Git, Claude Code, GitHub Actions, Jira, Postman, Bruno, Figma, VS Code, JetBrains IDEs}
         
     }}
   \resumeSubHeadingListEnd
@@ -189,29 +189,31 @@
       {Wealthsimple}{Jan. 2026 \textbf{--} Present}
       {Intern, Software Development}{}
       \resumeItemListStart
-            \resumeItem{Drove the full-stack rebuild of the internal \textbf{Orders page} used daily by Wealthsimple customer support agents and operations to monitor \textbf{30,000 orders/day}, designing a new \textbf{GraphQL} endpoint in \textbf{Kotlin} and \textbf{Spring Boot} and redesigning the \textbf{TypeScript/React} frontend}
-            \resumeItem{Designing and rolling out a \textbf{database archiving} solution by splitting the order entity and introducing archived tables for historical orders, preserving long-term order history while keeping primary tables fast for high-volume reads}
-            \resumeItem{Shipped customer-facing email notifications for \textbf{Norbert's Gambit} transactions reaching \textbf{3,000+ clients weekly}, and authored a \textbf{Claude Code skill} that guides developers end-to-end through adding new notification flows across a 4-system pipeline}
-            \resumeItem{Engineered \textbf{dynamic order release throttling} in \textbf{Kotlin} and \textbf{Spring Boot} that ensures \textbf{85,000+ pre-market orders} fully release by market open, scaling submission rate to queue depth across a 15-minute release window}
-            \resumeItem{Migrated \textbf{20+ production order monitors} from a legacy \textbf{Guice} framework to \textbf{Spring Boot}, preserving alerting continuity across critical paths including pending submission, extended/overnight orders, fractional orders, and options}
+            \resumeItem{Led the full-stack rebuild of the internal Orders page monitoring \textbf{30,000+ orders/day} for CX and ops, shipping a new GraphQL endpoint in Kotlin/Spring Boot, a redesigned TypeScript/React frontend, and detail views for crypto, options, DRIP, and managed accounts}
+            \resumeItem{Designed and shipped an \textbf{order archiving} system moving closed orders into a dedicated 11-table archive schema with tenancy-aware reads, drained by a Temporal workflow with a matching reverse-archive path for safe recovery}
+            \resumeItem{Shipped \textbf{Norbert's Gambit} emails reaching 3,000+ clients weekly, refactored the shared notification code (models, utils, SQS publisher) into a common library used across order services, and authored a Claude Code skill that walks developers through adding new notification flows}
+            \resumeItem{Owned end-to-end migration of \textbf{40+ production order monitors} off a legacy Guice framework onto Spring Boot across 15+ batches, spanning equity, options, fractional, and cross-market flow monitors, preserving alerting continuity throughout}
+            \resumeItem{Contributed backend, notifications, and trade confirmation support for Wealthsimple's \textbf{IPO access} launch, including API-layer duplicate-order rejection to prevent over-allocation and IPO-specific wording for order-cancelled and order-rejected notifications}
+            \resumeItem{Delivered self-serve \textbf{trade confirmation PDF access} for Wealthsimple's customer support agents, coordinating role provisioning, backend authorization, and frontend gating across five services to eliminate engineering escalations for client PDF requests}
+            \resumeItem{Added to the secondary on-call rotation for order execution, resolving all incoming client-escalation tickets with same-day turnarounds on cases including double-charged trades, TFSA execution issues, and USD/CAD conversion mismatches}
         \resumeItemListEnd
 
     \resumeSubheading
       {Royal Bank of Canada}{Sep. 2025 \textbf{--} Dec. 2025}
       {Software Engineering Intern}{}
         \resumeItemListStart
-            \resumeItem{Built features that serve \textbf{85,000+ users} on Tia, RBC's internal tech support bot, using \textbf{TypeScript} and \textbf{React}}
-            \resumeItem{Reduced manual work by the Service Now team by \textbf{30\%} and improved response times for critical issues by creating an automated ticket escalation feature}
-            \resumeItem{Enabled over \textbf{15,000 more users} to access tech support by utilizing \textbf{Google Dialogflow} to enhance Tia's natural language understanding capabilities and support employees in both English and French}
+            \resumeItem{Shipped TypeScript/React features on Tia, RBC's internal tech support bot serving \textbf{85,000+ employees}}
+            \resumeItem{Built an automated ticket escalation flow that cut ServiceNow team manual work by \textbf{30\%} and improved critical-issue response times}
+            \resumeItem{Added bilingual English/French support and tuned Google Dialogflow's natural language understanding, reaching \textbf{15,000+ additional users}}
         \resumeItemListEnd
 
     \resumeSubheading
       {Royal Bank of Canada}{May 2025 \textbf{--} Aug. 2025}
       {Developer, RBC Amplify Program}{}
         \resumeItemListStart
-            \resumeItem{Developed a \textbf{patent-pending wire payment routing engine} that intelligently selects routes by integrating the \textbf{SWIFT} reference table with internal routing rules}
-            \resumeItem{\textbf{Architected} the application using a \textbf{Java} and \textbf{Spring Boot} backend with \textbf{PostgreSQL} databases}
-            \resumeItem{Won \textbf{Technical Distinction}, a \textbf{\$20,000} prize for technical excellence and engineering craftsmanship, after presenting the product to C-suite executives (CTO, CFO) and hundreds of attendees}
+            \resumeItem{Built a \textbf{patent-pending wire payment routing engine} on a Java/Spring Boot backend with PostgreSQL, integrating the SWIFT reference table with internal routing rules}
+            \resumeItem{Designed the routing rules as a configurable system so non-technical teams could update logic as business requirements evolved, without engineering involvement}
+            \resumeItem{Won \textbf{Technical Distinction}, a \$20,000 prize for technical excellence and engineering craftsmanship, after presenting the product to C-suite executives (CTO, CFO) and hundreds of attendees}
         \resumeItemListEnd
 
 
@@ -222,12 +224,6 @@
     %        \resumeItem{Managed inventory and fulfilled orders for graduation products, ensuring accurate order packing and timely delivery to over 100 schools across Canada}
     %    \resumeItemListEnd
 
-     \resumeSubheading
-       {HeyBrain AI}{Apr. 2023 \textbf{--} Jun. 2023}
-       {Software Developer Intern}{}
-         \resumeItemListStart
-             \resumeItem{Developed a Telegram bot using \textbf{Python} that interfaces with HeyBrain's AI models, allowing users to interact with the AI through a chatbot platform}
-         \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -241,13 +237,13 @@
       \resumeProjectHeading
       {\textbf{WhatsApp Fantasy Manager} $|$ \emph{\href{https://github.com/noahgoldschmied/WhatsappFantasyManager}{\color{blue}Repo}}}{}
         \resumeItemListStart
-          \resumeItem{A \textbf{TypeScript} project that allows users to chat with and manage their fantasy sports teams on WhatsApp. Deployed on \textbf{DigitalOcean}, connected to WhatsApp via the \textbf{Twilio} sandbox.}
+          \resumeItem{TypeScript chatbot for managing fantasy sports teams on WhatsApp, deployed on DigitalOcean and connected via the Twilio sandbox}
         \resumeItemListEnd
-      
+
       \resumeProjectHeading
         {\textbf{Name That Sport} $|$ \emph{\href{https://namethatsport.streamlit.app/}{\color{blue}Link}}}{}
           \resumeItemListStart
-            \resumeItem{A \textbf{Python} project where users can provide an image of a sport and the model predicts the sport using a pre-trained CNN. The model was built using \textbf{TensorFlow} \& \textbf{Keras} and achieved an accuracy of 83\% on a custom set of 1000 images across 100 sports.}
+            \resumeItem{Trained an image classifier that predicts the sport shown in a photo, using a pre-trained CNN in TensorFlow/Keras; reached \textbf{83\% accuracy} on a custom 1,000-image, 100-sport test set}
           \resumeItemListEnd
       
       %\resumeProjectHeading
@@ -265,9 +261,8 @@
   \vspace{0pt}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{Featured in McMaster Engineering Article:} Featured in university publication for work on RBC Amplify wire payment routing engine. {\color{blue}{\href{https://www.eng.mcmaster.ca/news/how-two-mcmaster-engineering-students-took-on-rbcs-amplify-program-and-won-big/}{Article link}}}. \\ \vspace{3pt}
-        \textbf{Technical Distinction -- RBC Amplify:} Received top engineering prize of \textbf{\$20,000} for \textbf{engineering quality and craftsmanship}. \\ \vspace{3pt}
-        \textbf{Provisional Patent:} Filed provisional patent for rule-based wire payment routing engine allowing non-technical teams to modify routing logic based on evolving business requirements.
+        \textbf{Technical Distinction, RBC Amplify:} \$20,000 top engineering prize for engineering craftsmanship. Featured in McMaster Engineering publication ({\color{blue}{\href{https://www.eng.mcmaster.ca/news/how-two-mcmaster-engineering-students-took-on-rbcs-amplify-program-and-won-big/}{link}}}). \\ \vspace{3pt}
+        \textbf{Provisional Patent:} Filed for a rule-based wire payment routing engine allowing non-technical teams to modify routing logic as business requirements evolve.
     }}
   \resumeSubHeadingListEnd
 
