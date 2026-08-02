@@ -94,6 +94,9 @@
 }
 
 
+% Takes 6 args: school, location, degree, dates, honours, programme note.
+% Keep the arity, the body rows, and every call site in sync -- a mismatch
+% makes TeX silently swallow following tokens.
 \newcommand{\resumeEducationHeading}[6]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -112,7 +115,7 @@
 }
 
 
-\newcommand{\resumeOrganizationHeading}[4]{
+\newcommand{\resumeOrganizationHeading}[3]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textit{\small #2} \\
@@ -163,8 +166,8 @@
 
     \resumeEducationHeading
       {McMaster University}{Hamilton, Ontario, Canada}
-      {\href{https://www.eng.mcmaster.ca/cas/degree-options/software-engineering-and-management/}{B.Eng.Mgt in Software Engineering and Management}}{Sep. 2021 \textbf{--} Apr. 2027 (expected)}
-      {GPA: 10.6/12; Dean's Honour List (2021-2024)}{5 year degree \& 16 months co-op}
+      {\href{https://www.eng.mcmaster.ca/cas/degree-options/software-engineering-and-management/}{B.Eng.Mgt in Software Engineering and Management (co-op)}}{Sep. 2021 \textbf{--} Apr. 2027 (expected)}
+      {GPA: 10.6/12; Dean's Honour List (4x)}{5 year degree \& 16 months co-op}
   \resumeSubHeadingListEnd
 
 %----------- SKILLS -----------
@@ -173,13 +176,9 @@
   \vspace{0pt}
   \resumeSubHeadingListStart
     \small{\item{
-
-        \textbf{Languages:}{ Kotlin, TypeScript, Java, Python, SQL, HTML, CSS} \\ \vspace{3pt}
-
-        \textbf{Technologies:}{ Spring Boot, GraphQL, JPA/Hibernate, PostgreSQL, Liquibase, Temporal, React, Docker, Datadog, Terraform, Braze, Google Dialogflow, DigitalOcean, Twilio} \\ \vspace{3pt}
-
-        \textbf{Tools:}{ Git, Claude Code, GitHub Actions, Jira, Postman, Bruno, Figma, VS Code, JetBrains IDEs}
-
+        \textbf{Languages:}{ Kotlin, TypeScript, Java, Python, SQL} \\ \vspace{3pt}
+        \textbf{Technologies:}{ Temporal, Spring Boot, GraphQL, Liquibase, React, JPA/Hibernate, PostgreSQL, WebSockets, Google Dialogflow} \\ \vspace{3pt}
+        \textbf{Tools:}{ Claude Code, Datadog, Figma, Notion, Jira, Git, GitHub Actions, Postman}
     }}
   \resumeSubHeadingListEnd
 
@@ -193,11 +192,11 @@
 
     \resumeSubheading
       {Wealthsimple}{}
-      {Intern, Software Development}{Jan. 2026 \textbf{--} Present}
+      {Software Development Intern}{Jan. 2026 \textbf{--} Aug. 2026}
       \resumeItemListStart
             \resumeItem{Designed and shipped an \textbf{order archiving} system moving closed orders into a dedicated 11-table archive schema with tenancy-aware reads, drained by a Temporal workflow with a matching reverse-archive path for safe recovery}
             \resumeItem{Led the full-stack rebuild of the internal Orders page monitoring \textbf{30,000+ orders/day} for CX and ops, shipping a new GraphQL endpoint in Kotlin/Spring Boot, a redesigned TypeScript/React frontend, and detail views for crypto, options, DRIP, and managed accounts}
-            %\resumeItem{Shipped \textbf{Norbert's Gambit} emails reaching 3,000+ clients weekly, refactored the shared notification code (models, utils, SQS publisher) into a common library used across order services, and authored a Claude Code skill that walks developers through adding new notification flows}
+            \resumeItem{Shipped \textbf{Norbert's Gambit} emails reaching 3,000+ clients weekly, refactored the shared notification code (models, utils, SQS publisher) into a common library used across order services, and authored a Claude Code skill that walks developers through adding new notification flows}
             \resumeItem{Owned end-to-end migration of \textbf{40+ production order monitors} off a legacy Guice framework onto Spring Boot across 15+ batches, spanning equity, options, fractional, and cross-market flow monitors, preserving alerting continuity throughout}
             \resumeItem{Contributed backend, notifications, and trade confirmation support for Wealthsimple's \textbf{IPO access} launch, including API-layer duplicate-order rejection to prevent over-allocation and IPO-specific wording for order-cancelled and order-rejected notifications}
             %\resumeItem{Delivered self-serve \textbf{trade confirmation PDF access} for Wealthsimple's customer support agents, coordinating role provisioning, backend authorization, and frontend gating across five services to eliminate engineering escalations for client PDF requests}
@@ -219,7 +218,7 @@
         \resumeItemListStart
             \resumeItem{Built a \textbf{patent-pending wire payment routing engine} on a Java/Spring Boot backend with PostgreSQL, integrating the SWIFT reference table with internal routing rules}
             \resumeItem{Designed the routing rules as a configurable system so non-technical teams could update logic as business requirements evolved, without engineering involvement}
-            \resumeItem{Won \textbf{Technical Distinction}, a \$20,000 prize for technical excellence and engineering craftsmanship, after presenting the product to C-suite executives (CTO, CFO) and hundreds of attendees}
+            \resumeItem{Presented the product to RBC's CTO, CFO, and hundreds of attendees, earning \textbf{Technical Distinction}, the program's top engineering award}
         \resumeItemListEnd
 
     %\resumeSubheading
@@ -240,22 +239,22 @@
     \resumeSubHeadingListStart
 
        \resumeProjectHeading
-             {\textbf{Careerdle} $|$ \emph{\href{https://careerdle.pages.dev/}{\color{blue}Link}}}{}
+             {\textbf{Declaration} $|$ \emph{\href{https://github.com/noahgoldschmied/declaration}{\color{blue}Repo}} $|$ \emph{\href{https://declaration-11d935b15b3d.herokuapp.com/}{\color{blue}Site}}}{}
                \resumeItemListStart
-                 \resumeItem{A wordle-esque game where you guess an athlete based on their career path, built with TS + React and deployed on Cloudflare Pages}
+                 \resumeItem{Built so my friends could keep playing cards after we scattered across cities. A \textbf{Kotlin} backend and \textbf{TypeScript/React} frontend over \textbf{WebSockets}, with bot opponents so a short lobby still starts}
                \resumeItemListEnd
 
-      \resumeProjectHeading
-      {\textbf{WhatsApp Fantasy Manager} $|$ \emph{\href{https://github.com/noahgoldschmied/WhatsappFantasyManager}{\color{blue}Repo}}}{}
-        \resumeItemListStart
-          \resumeItem{TypeScript chatbot for managing fantasy sports teams on WhatsApp, deployed on DigitalOcean and connected via the Twilio sandbox}
-        \resumeItemListEnd
+       \resumeProjectHeading
+             {\textbf{Careerdle} $|$ \emph{\href{https://github.com/noahgoldschmied/careerdle}{\color{blue}Repo}} $|$ \emph{\href{https://careerdle.pages.dev/}{\color{blue}Site}}}{}
+               \resumeItemListStart
+                 \resumeItem{Turned the ``name that player'' posts going around Instagram into a proper daily game where you guess an athlete from their career path, with TS + React and deployed on Cloudflare Pages}
+               \resumeItemListEnd
 
-      \resumeProjectHeading
-        {\textbf{Name That Sport} $|$ \emph{\href{https://namethatsport.streamlit.app/}{\color{blue}Link}}}{}
-          \resumeItemListStart
-            \resumeItem{Trained an image classifier that predicts the sport shown in a photo, using a pre-trained CNN in TensorFlow/Keras; reached \textbf{83\% accuracy} on a custom 1,000-image, 100-sport test set}
-          \resumeItemListEnd
+      %\resumeProjectHeading
+      %  {\textbf{Name That Sport} $|$ \emph{\href{TODO-REPO-URL}{\color{blue}Repo}} $|$ \emph{\href{https://namethatsport.streamlit.app/}{\color{blue}Site}}}{}
+      %    \resumeItemListStart
+      %      \resumeItem{Trained an image classifier that predicts the sport shown in a photo, using a pre-trained CNN in TensorFlow/Keras; reached \textbf{83\% accuracy} on a custom 1,000-image, 100-sport test set}
+      %    \resumeItemListEnd
       
       %\resumeProjectHeading
       %  {\textbf{Software Experiments and Lab Studies}}{}
