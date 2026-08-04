@@ -1,0 +1,6 @@
+# core.autocrlf=true would otherwise check shell scripts out with CRLF,
+# which breaks the shebang under bash. Force LF for them.
+*.sh text eol=lf
+
+# Never run line-ending conversion on the compiled resume.
+*.pdf binary
